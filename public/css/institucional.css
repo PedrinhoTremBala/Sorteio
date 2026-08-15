@@ -1,0 +1,169 @@
+/* ════════════════════════════════════
+   institucional.css — páginas estáticas
+   (Sobre, Contato, Privacidade, Termos, 404)
+   Mesma paleta do app React (global.css)
+   ════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #f5f4f0;
+  --surface: #ffffff;
+  --border:  #e2e0db;
+  --text:    #1a1a1a;
+  --muted:   #888580;
+  --accent:  #e8703a;
+  --green:   #3ab87a;
+  --radius:  14px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+}
+
+.wrap{
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.header{ margin-bottom: 14px; }
+.header h1{
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.header h1 span{ color: var(--accent); }
+.header p{ margin-top: 6px; color: var(--muted); font-size: 0.93rem; }
+
+.site-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 18px;
+  margin:22px 0 36px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+.site-nav a{
+  font-size:0.85rem;
+  font-weight:700;
+  color:var(--muted);
+  text-decoration:none;
+  padding:6px 2px;
+  border-bottom:2px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.site-nav a:hover,
+.site-nav a.active{
+  color:var(--text);
+  border-bottom-color:var(--accent);
+}
+
+.page-article{ margin: 0 0 56px; }
+.page-article h1{
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.page-article .page-updated{
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+.page-article h2{
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 26px 0 8px;
+}
+.page-article p{
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.92rem;
+  margin: 0 0 14px;
+}
+.page-article ul{
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.92rem;
+  padding-left: 20px;
+  margin: 0 0 14px;
+}
+.page-article li{ margin-bottom: 6px; }
+.page-article a{
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content-section{
+  margin-top: 44px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.content-section h2{ font-size: 1.15rem; margin: 0 0 12px; }
+.content-section h3{ font-size: 0.97rem; margin: 22px 0 8px; }
+.content-section p{ color: var(--muted); line-height: 1.75; font-size: 0.92rem; margin: 0 0 12px; }
+
+.faq-item{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px 17px;
+  margin-bottom: 10px;
+}
+.faq-item b{ display:block; font-size: 0.92rem; margin-bottom: 5px; }
+.faq-item p{ margin: 0; font-size: 0.87rem; }
+
+.contact-box{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  background: var(--surface);
+  margin-top: 8px;
+}
+.contact-box b{ display:block; margin-bottom:4px; }
+.contact-box span{ color: var(--muted); font-size: 0.9rem; }
+
+.footer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  text-align:center;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:4px 16px;
+}
+.footer-links a{
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-links a:hover{ color: var(--text); }
+
+.notfound-wrap{ text-align:center; padding: 60px 20px; }
+.notfound-wrap .code-404{
+  font-family: 'Nunito', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+.notfound-wrap p{ color: var(--muted); margin: 10px 0 22px; }
+.notfound-wrap a.btn-home{
+  display:inline-block;
+  background: var(--accent);
+  color:#fff;
+  font-weight:700;
+  padding: 10px 22px;
+  border-radius: 10px;
+  text-decoration:none;
+}

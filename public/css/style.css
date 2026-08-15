@@ -1,0 +1,113 @@
+/* ════════════════════════════════════
+   style.css — páginas estáticas (Sobre, Contato, Privacidade, Termos, 404)
+   Usa os mesmos tokens visuais do app React (Roleta Sortuda)
+   ════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #f5f4f0;
+  --surface: #ffffff;
+  --border:  #e2e0db;
+  --text:    #1a1a1a;
+  --muted:   #888580;
+  --accent:  #e8703a;
+  --green:   #3ab87a;
+  --radius:  14px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.header { margin-bottom: 20px; }
+.header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.header h1 span { color: var(--accent); }
+.header p { margin-top: 5px; color: var(--muted); font-size: 0.9rem; }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 20px 0 30px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.site-nav a {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.site-nav a:hover, .site-nav a.active { color: var(--text); border-color: var(--accent); }
+
+article.page {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  margin-bottom: 40px;
+}
+article.page h1 { font-size: 1.5rem; margin-bottom: 4px; }
+article.page .updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 20px; }
+article.page h2 { font-size: 1.05rem; margin: 22px 0 8px; }
+article.page p { color: var(--muted); line-height: 1.75; font-size: 0.9rem; margin-bottom: 12px; }
+article.page ul { color: var(--muted); line-height: 1.8; font-size: 0.9rem; padding-left: 20px; margin-bottom: 12px; }
+article.page li { margin-bottom: 6px; }
+article.page a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+.contact-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-top: 6px;
+}
+.contact-box b { display: block; margin-bottom: 3px; }
+.contact-box span { color: var(--muted); font-size: 0.88rem; }
+
+.notfound { text-align: center; padding: 70px 20px; }
+.notfound .code { font-size: 3.4rem; font-weight: 800; color: var(--accent); }
+.notfound p { color: var(--muted); margin: 10px 0 22px; }
+.notfound a {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.8;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
+  margin-bottom: 8px;
+}
+.footer-links a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.footer-links a:hover { color: var(--text); }
